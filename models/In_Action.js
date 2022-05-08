@@ -7,7 +7,7 @@ const InActionSchema = mongoose.Schema({
     },
     Consultant_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Consulatnt'
+        ref: 'Consultant'
     },
     coaching_hours,
     starting_date
