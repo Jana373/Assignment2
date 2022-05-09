@@ -9,7 +9,12 @@ const InActionSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Consultant'
     },
-    coaching_hours,
-    starting_date
+    coaching_hours: {
+        type: Number
+    },
+    starting_date: {
+        type: Date
+    }
 
 })
+const inAction = module.exports = mongoose.model("inAction", InActionSchema)

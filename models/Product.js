@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const ProductSchema = mongoose.Schema({
     MSME_id: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'MSME'
+        ref: 'MSME',
+        index: true
     },
     Category: {
         type: String
@@ -19,8 +20,9 @@ const ProductSchema = mongoose.Schema({
     },
     Image_url: {
         type: String
-    }
+    },
 
-
+   
 
 })
+const Product = module.exports = mongoose.model('Product', ProductSchema)

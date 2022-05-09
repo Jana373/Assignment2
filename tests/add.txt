@@ -1,0 +1,51 @@
+MSME: 
+	url: http://localhost:3000/add/MSME
+	body : {
+     			"Name": "janazzz",
+     			"Website": "web.com",
+    		 	"Business_Model": "req.body.Business_Model",
+     			"Address": "req.body.Address",
+     			"Year_of_Establishment": "Wed May 04 2022 10:12:49 GMT+0300 (Eastern European Summer Time)"
+		}
+Consultant: 
+	
+	url: http://localhost:3000/add/Consultant
+	body: {
+				"Last_Name": "req.body.Last_Name",
+        		"Email_Address": "req.body.Email_Address",
+        		"Mobile_Number": "req.body.Mobile_Number",
+         		"Experience": "5",
+				"Country": "req.body.Country",
+        		"City": "req.body.City",
+        		"Area_Of_Experience": "req.body.Area_Of_Experience",
+        		"Role_Level": "req.body.Role_Level",
+        		"Industry": "req.body.Industry",
+        		"Date_Of_Birth": "Wed May 04 2022 10:12:49 GMT+0300 (Eastern European Summer Time)"
+		}
+Product:
+	url: http://localhost:3000/add/Product/id 
+	body: {
+	 	 		"Category": "req.body.Category",
+        	 	"Name": "req.params.Name",
+        		"Description": "req.params.Description",
+        		"Price": "80",
+        		"Image_url": "req.params.Image_url"
+
+	      }
+PreConsulting:
+	url: http://localhost:3000/add/PreConsulitng/id
+	body: {
+        		"MSME_id": "req.params.id",
+        		"Begning_Stage": "req.body.Begning_Stage",
+        		"Expected_coaching_hours": "15",
+        		"Goal_stage": "req.body.Goal_stage"
+		}
+
+Action: 
+	url: http://localhost:3000/add/action/id
+	body: {
+        		"MSME_id": "req.params.id",
+        		"Consultant_id": "6278e401d86b6176ba0d2000",
+       			"coaching_hours": "9",
+        		"starting_date": "Wed May 04 2022 10:12:49"
+	       }

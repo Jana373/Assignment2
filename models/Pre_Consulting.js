@@ -17,3 +17,4 @@ const PreConsultingSchema = mongoose.Schema({
 
 
 })
+const PreConsulting = module.exports = mongoose.model('PreConsulting', PreConsultingSchema)

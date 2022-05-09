@@ -21,3 +21,4 @@ const MonthlyProgressSchema = mongoose.Schema({
         type: String
     }
 })
+const MonthlyProgress = module.exports = mongoose.model('MonthlyProgress', MonthlyProgressSchema)
