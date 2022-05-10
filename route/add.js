@@ -79,6 +79,7 @@ router.post('/PreConsulitng/:id', async (req, res) => {
         Expected_coaching_hours: req.body.Expected_coaching_hours,
         Goal_stage: req.body.Goal_stage
     })
+   
     try {
         const result = await new_precons.save()
         res.json({ msg: "your precons has been added succefully" })
