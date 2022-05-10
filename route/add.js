@@ -89,7 +89,7 @@ router.post('/PreConsulitng/:id', async (req, res) => {
     }
 })
 // adding monthly progress
-router.post('progress/:id', async (req, res) => {
+router.post('/progress/:id', async (req, res) => {
     let new_month = new MonthlyProgress({
         MSME_id: req.params.id,
         Month_Number: req.body.Month_Number,

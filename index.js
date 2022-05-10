@@ -7,7 +7,8 @@ var cors = require('cors');
 var app = express();
 
 const add_route = require('./route/add');
-const get_route = require('./route/get')
+const get_route = require('./route/get');
+const delete_route = require('./route/delete')
 
 // connect to mongodb
 mongoose.connect('mongodb://localhost:27017/MSME');
@@ -34,6 +35,7 @@ app.use(bodyparser.json());
 // route ending with/ will be directed to route file 
 app.use('/add', add_route)
 app.use('/get', get_route)
+app.use('/delete', delete_route)
 
 app.listen(PORT, () => {
     console.log('Server has been started at port: ' + PORT);
